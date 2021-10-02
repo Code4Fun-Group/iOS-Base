@@ -7,7 +7,6 @@
 
 import Foundation
 
-// swiftlint:disable multiline_arguments_brackets
 private enum Constants {
 	static let restorationIdenfier: String = "reuseLoadingIdenfier"
 	static let roundedContainerAlphaBackground: CGFloat = 0.70
