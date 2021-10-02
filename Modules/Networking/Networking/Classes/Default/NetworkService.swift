@@ -83,6 +83,7 @@ private extension NetworkingService {
 		case .download:
 			AF.download(request).responseData { response in
 				// TODO: - Handle download
+				print(response)
 			}
 		}
 	}
