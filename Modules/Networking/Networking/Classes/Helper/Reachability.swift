@@ -18,7 +18,6 @@ public extension Notification.Name {
 }
 
 public class Reachability {
-
 	public typealias NetworkReachable = (Reachability) -> ()
 	public typealias NetworkUnreachable = (Reachability) -> ()
 
@@ -142,7 +141,6 @@ public class Reachability {
 }
 
 public extension Reachability {
-
 	// MARK: - *** Notifier methods ***
 	func startNotifier() throws {
 		guard !notifierRunning else { return }
@@ -228,9 +226,9 @@ public extension Reachability {
 }
 
 fileprivate extension Reachability {
-
 	func setReachabilityFlags() throws {
-		try reachabilitySerialQueue.sync { [unowned self] in
+		try reachabilitySerialQueue.sync { [weak self] in
+			guard let self = self else { return }
 			var flags = SCNetworkReachabilityFlags()
 			if !SCNetworkReachabilityGetFlags(self.reachabilityRef, &flags) {
 				self.stopNotifier()
@@ -254,7 +252,6 @@ fileprivate extension Reachability {
 }
 
 extension SCNetworkReachabilityFlags {
-
 	typealias Connection = Reachability.Connection
 
 	var connection: Connection {
