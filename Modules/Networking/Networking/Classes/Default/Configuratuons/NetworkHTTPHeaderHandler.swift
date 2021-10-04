@@ -8,11 +8,7 @@
 import Foundation
 
 public struct NetworkHTTPHeaderHandler {
-	let config: INetworkConfigurations
-	
-	public init(config: INetworkConfigurations) {
-		self.config = config
-	}
+	public init() {}
 }
 
 extension NetworkHTTPHeaderHandler: INetworkHTTPHeaderHandler {

@@ -7,13 +7,13 @@
 
 import Alamofire
 
-public struct MobileBFFNetworkHTTPResponseHandler {
+public struct NetworkHTTPResponseHandler {
 	public init() { }
 }
 
 // MARK: - INetworkHTTPResponseHandler
 
-extension MobileBFFNetworkHTTPResponseHandler: INetworkHTTPResponseHandler {
+extension NetworkHTTPResponseHandler: INetworkHTTPResponseHandler {
 	public func handle(response: AFDataResponse<Data>, completion: @escaping (Result<Data?, Error>) -> Void) {
 		guard let httpResponse = response.response else {
 			if let errorResponse = response.error as NSError? {

@@ -9,15 +9,23 @@
 /* Begin PBXBuildFile section */
 		7F4A355FCFDF005DFF0EADA9 /* Pods_iOSBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5A73354611ECE982A3CD8B /* Pods_iOSBase.framework */; };
 		8D1D20ACC3CD509138329FD2 /* Pods_iOSBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995C2529E52EF556E7F67CAC /* Pods_iOSBaseUITests.framework */; };
+		CB23BB14270B71C00074AFD8 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23BB13270B71C00074AFD8 /* SampleModel.swift */; };
+		CB23BB17270B73C00074AFD8 /* ServerErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23BB16270B73C00074AFD8 /* ServerErrorResponse.swift */; };
+		CB23BB19270B73CD0074AFD8 /* SampleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23BB18270B73CD0074AFD8 /* SampleResponse.swift */; };
 		CB4A64572708010700185B25 /* iOSBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A64562708010700185B25 /* iOSBaseTests.swift */; };
 		CB4A64652708010F00185B25 /* iOSBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A64642708010F00185B25 /* iOSBaseUITests.swift */; };
 		CB4A64672708010F00185B25 /* iOSBaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A64662708010F00185B25 /* iOSBaseUITestsLaunchTests.swift */; };
+		CB9D8F73270B6C6300238F4D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D8F72270B6C6300238F4D /* APIService.swift */; };
+		CB9D8F75270B6C7700238F4D /* APIResourceQueryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D8F74270B6C7700238F4D /* APIResourceQueryAdapter.swift */; };
+		CB9D8F77270B6C8900238F4D /* APIResourceResponseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D8F76270B6C8900238F4D /* APIResourceResponseAdapter.swift */; };
+		CBC9240A270B658E005171FD /* DependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC92409270B658E005171FD /* DependencyResolver.swift */; };
 		CBEAB32826FB9BAC00BD82C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAB2E626FA1BBD00BD82C6 /* HomeViewController.swift */; };
 		CBEAB32926FB9BAC00BD82C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAB2E226FA1BBD00BD82C6 /* AppDelegate.swift */; };
 		CBEAB32A26FB9BAC00BD82C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEAB2E426FA1BBD00BD82C6 /* SceneDelegate.swift */; };
 		CBEAB32E26FB9BAC00BD82C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2ED26FA1BBE00BD82C6 /* LaunchScreen.storyboard */; };
 		CBEAB32F26FB9BAC00BD82C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2EB26FA1BBE00BD82C6 /* Assets.xcassets */; };
 		CBEAB33026FB9BAC00BD82C6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2E826FA1BBD00BD82C6 /* Home.storyboard */; };
+		CBF655CD270B699100D68B12 /* APIConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF655CC270B699100D68B12 /* APIConfigurations.swift */; };
 		E695D4916DDBB84F7EF7E8C7 /* Pods_iOSBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9B3EB6EA542747DE57BFCF /* Pods_iOSBaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,11 +70,18 @@
 		AFA1236661D3836D65153DFC /* Pods-iOSBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSBaseTests/Pods-iOSBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8B93415D8E040F6F8F8E0B9 /* Pods-iOSBase-iOSBaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase-iOSBaseUITests.release.xcconfig"; path = "Target Support Files/Pods-iOSBase-iOSBaseUITests/Pods-iOSBase-iOSBaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0C3BE1E15BBD35F4003FAA7 /* Pods-iOSBase-iOSBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase-iOSBaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSBase-iOSBaseUITests/Pods-iOSBase-iOSBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB23BB13270B71C00074AFD8 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		CB23BB16270B73C00074AFD8 /* ServerErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerErrorResponse.swift; sourceTree = "<group>"; };
+		CB23BB18270B73CD0074AFD8 /* SampleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleResponse.swift; sourceTree = "<group>"; };
 		CB4A64542708010700185B25 /* iOSBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4A64562708010700185B25 /* iOSBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBaseTests.swift; sourceTree = "<group>"; };
 		CB4A64622708010F00185B25 /* iOSBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4A64642708010F00185B25 /* iOSBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBaseUITests.swift; sourceTree = "<group>"; };
 		CB4A64662708010F00185B25 /* iOSBaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB9D8F72270B6C6300238F4D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CB9D8F74270B6C7700238F4D /* APIResourceQueryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResourceQueryAdapter.swift; sourceTree = "<group>"; };
+		CB9D8F76270B6C8900238F4D /* APIResourceResponseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResourceResponseAdapter.swift; sourceTree = "<group>"; };
+		CBC92409270B658E005171FD /* DependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolver.swift; sourceTree = "<group>"; };
 		CBEAB2E226FA1BBD00BD82C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBEAB2E426FA1BBD00BD82C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CBEAB2E626FA1BBD00BD82C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +94,7 @@
 		CBEAB30426FA1BBE00BD82C6 /* iOSBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBaseUITests.swift; sourceTree = "<group>"; };
 		CBEAB30626FA1BBE00BD82C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBEAB33526FB9BAC00BD82C6 /* iOSBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF655CC270B699100D68B12 /* APIConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurations.swift; sourceTree = "<group>"; };
 		CED964762F7EE0AD92F5CA1F /* Pods-staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-staging.debug.xcconfig"; path = "Target Support Files/Pods-staging/Pods-staging.debug.xcconfig"; sourceTree = "<group>"; };
 		D20C31B2FBE977B821FF863F /* Pods-iOSBaseTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBaseTests.production.xcconfig"; path = "Target Support Files/Pods-iOSBaseTests/Pods-iOSBaseTests.production.xcconfig"; sourceTree = "<group>"; };
 		D82CD1A3AD0AC220C0688E37 /* Pods-staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-staging.release.xcconfig"; path = "Target Support Files/Pods-staging/Pods-staging.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +142,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB23BB11270B71AB0074AFD8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAB2E626FA1BBD00BD82C6 /* HomeViewController.swift */,
+				CBEAB2E826FA1BBD00BD82C6 /* Home.storyboard */,
+				CB23BB12270B71B00074AFD8 /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CB23BB12270B71B00074AFD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB23BB13270B71C00074AFD8 /* SampleModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB23BB15270B73B00074AFD8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CB23BB16270B73C00074AFD8 /* ServerErrorResponse.swift */,
+				CB23BB18270B73CD0074AFD8 /* SampleResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		CB4A64552708010700185B25 /* iOSBaseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +186,26 @@
 			path = iOSBaseUITests;
 			sourceTree = "<group>";
 		};
+		CB9D8F71270B6C5200238F4D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CB23BB15270B73B00074AFD8 /* Entities */,
+				CBF655CC270B699100D68B12 /* APIConfigurations.swift */,
+				CB9D8F72270B6C6300238F4D /* APIService.swift */,
+				CB9D8F74270B6C7700238F4D /* APIResourceQueryAdapter.swift */,
+				CB9D8F76270B6C8900238F4D /* APIResourceResponseAdapter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		CBB49E722706E7DA0043B128 /* AppConfiguration */ = {
 			isa = PBXGroup;
 			children = (
 				CBEAB2E226FA1BBD00BD82C6 /* AppDelegate.swift */,
-				CBEAB2E426FA1BBD00BD82C6 /* SceneDelegate.swift */,
+				CBC92409270B658E005171FD /* DependencyResolver.swift */,
 				CBEAB2F026FA1BBE00BD82C6 /* Info.plist */,
 				CBEAB2ED26FA1BBE00BD82C6 /* LaunchScreen.storyboard */,
+				CBEAB2E426FA1BBD00BD82C6 /* SceneDelegate.swift */,
 			);
 			path = AppConfiguration;
 			sourceTree = "<group>";
@@ -165,10 +221,16 @@
 		CBB49E742706E7FA0043B128 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				CBEAB2E626FA1BBD00BD82C6 /* HomeViewController.swift */,
-				CBEAB2E826FA1BBD00BD82C6 /* Home.storyboard */,
+				CB23BB11270B71AB0074AFD8 /* Home */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		CBC92408270B64B1005171FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CBEAB2D626FA1BBD00BD82C6 = {
@@ -198,9 +260,11 @@
 		CBEAB2E126FA1BBD00BD82C6 /* iOSBase */ = {
 			isa = PBXGroup;
 			children = (
-				CBB49E742706E7FA0043B128 /* Features */,
-				CBB49E732706E7E90043B128 /* Resources */,
 				CBB49E722706E7DA0043B128 /* AppConfiguration */,
+				CBB49E742706E7FA0043B128 /* Features */,
+				CB9D8F71270B6C5200238F4D /* Networking */,
+				CBB49E732706E7E90043B128 /* Resources */,
+				CBC92408270B64B1005171FD /* Services */,
 			);
 			path = iOSBase;
 			sourceTree = "<group>";
@@ -507,8 +571,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEAB32826FB9BAC00BD82C6 /* HomeViewController.swift in Sources */,
+				CB23BB14270B71C00074AFD8 /* SampleModel.swift in Sources */,
 				CBEAB32926FB9BAC00BD82C6 /* AppDelegate.swift in Sources */,
+				CB9D8F77270B6C8900238F4D /* APIResourceResponseAdapter.swift in Sources */,
+				CBC9240A270B658E005171FD /* DependencyResolver.swift in Sources */,
 				CBEAB32A26FB9BAC00BD82C6 /* SceneDelegate.swift in Sources */,
+				CB23BB19270B73CD0074AFD8 /* SampleResponse.swift in Sources */,
+				CB23BB17270B73C00074AFD8 /* ServerErrorResponse.swift in Sources */,
+				CB9D8F73270B6C6300238F4D /* APIService.swift in Sources */,
+				CB9D8F75270B6C7700238F4D /* APIResourceQueryAdapter.swift in Sources */,
+				CBF655CD270B699100D68B12 /* APIConfigurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

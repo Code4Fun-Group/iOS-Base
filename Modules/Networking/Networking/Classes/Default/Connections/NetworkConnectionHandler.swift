@@ -7,8 +7,10 @@
 
 import Foundation
 
-class NetworkConnectionHandler: INetworkConnectionHandler {
-	func waitUntilCheckNetworkConnectionCompleted(completion: @escaping (Result<Bool, Error>) -> Void) {
+public class NetworkConnectionHandler: INetworkConnectionHandler {
+	public init() {}
+	
+	public func waitUntilCheckNetworkConnectionCompleted(completion: @escaping (Result<Bool, Error>) -> Void) {
 		isNetworkAvailable() ? completion(.success(true)): completion(.failure(NetworkConnectionError.unavailable))
 	}
 }
