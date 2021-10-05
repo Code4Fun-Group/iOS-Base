@@ -36,7 +36,7 @@ def ui
 end
 
 def shared
-	#common
+	common
 	ui
 end
 

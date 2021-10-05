@@ -175,9 +175,29 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Development" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Common/Common.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CommonUI/CommonUI.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/netfox/netfox.framework"
 fi
+if [[ "$CONFIGURATION" == "PPE" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Common/Common.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CommonUI/CommonUI.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
+fi
+if [[ "$CONFIGURATION" == "Production" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Common/Common.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CommonUI/CommonUI.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
+fi
 if [[ "$CONFIGURATION" == "QA" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Common/Common.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CommonUI/CommonUI.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/netfox/netfox.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
