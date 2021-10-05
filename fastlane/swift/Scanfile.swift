@@ -15,9 +15,6 @@ public class Scanfile: ScanfileProtocol {
     // If you want to enable `scan`, run `fastlane scan init`
     // After, this file will be replaced with a custom implementation that contains values you supplied
     // during the `init` process, and you won't see this message
-	public var scheme: String? {
-		environmentVariable(get: "GYM_SCHEME")
-	}
 }
 
 // Generated with fastlane 2.194.0

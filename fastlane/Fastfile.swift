@@ -87,12 +87,13 @@ class Fastfile: LaneFile {
 			forceForNewDevices: .fastlaneDefault(configuration.exportMethod == "development")
 		)
 		
-		unlockKeychain(password: environmentVariable(get: "MATCH_KEYCHAIN_PASSWORD"))
 		// Build the product for the specified build configuration
 		gym(
 			scheme: .fastlaneDefault(configuration.schemeName),
+			clean: .fastlaneDefault(true),
 			outputName: .fastlaneDefault("\(configuration.schemeName)-\(configuration.buildConfiguration).ipa"),
 			configuration: .fastlaneDefault(configuration.buildConfiguration),
+			includeBitcode: .fastlaneDefault(true),
 			exportMethod: .fastlaneDefault(configuration.exportMethod)
 		)
 	}
