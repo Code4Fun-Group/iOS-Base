@@ -90,9 +90,8 @@ class Fastfile: LaneFile {
 		// Build the product for the specified build configuration
 		gym(
 			scheme: .fastlaneDefault(configuration.schemeName),
-			outputName: .fastlaneDefault("\(configuration.schemeName)-\(configuration.buildConfiguration).ipa"),
-			configuration: .fastlaneDefault(configuration.buildConfiguration),
-			skipPackageIpa: .fastlaneDefault(!exportIpa),
+			outputName: .fastlaneDefault("\(configuration.schemeName)-\(configuration.buildConfiguration).ipa"), configuration: .fastlaneDefault(configuration.buildConfiguration),
+			codesigningIdentity: .fastlaneDefault(configuration.exportMethod),
 			exportMethod: .fastlaneDefault(configuration.exportMethod)
 		)
 	}
