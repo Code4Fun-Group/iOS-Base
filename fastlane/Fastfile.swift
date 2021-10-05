@@ -92,6 +92,7 @@ class Fastfile: LaneFile {
 			scheme: .fastlaneDefault(configuration.schemeName),
 			outputName: .fastlaneDefault("\(configuration.schemeName)-\(configuration.buildConfiguration).ipa"),
 			configuration: .fastlaneDefault(configuration.buildConfiguration),
+			codesigningIdentity: .fastlaneDefault(configuration.exportMethod),
 			exportMethod: .fastlaneDefault(configuration.exportMethod)
 		)
 	}
