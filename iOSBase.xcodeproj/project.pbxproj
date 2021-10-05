@@ -310,6 +310,7 @@
 				CBEAB32D26FB9BAC00BD82C6 /* Resources */,
 				CBEAB33126FB9BAC00BD82C6 /* Swiftlint */,
 				ACEBFE30FB9BF45E6D18F04D /* [CP] Embed Pods Frameworks */,
+				CBDFF606270C39AA00BFEF7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,6 +447,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSBase/Pods-iOSBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBDFF606270C39AA00BFEF7E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Target Support Files/Pods-iOSBase/Pods-iOSBase-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"$(SRCROOT)/Target Support Files/Pods-iOSBase/Pods-iOSBase-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSBase/Pods-iOSBase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBEAB32626FB9BAC00BD82C6 /* [CP] Check Pods Manifest.lock */ = {
