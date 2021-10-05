@@ -1,10 +1,10 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
 ##################
 # App
 ##################
 workspace "iOSBase"
+platform :ios, '13.0'
 
 ##################
 # Global
