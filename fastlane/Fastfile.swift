@@ -94,7 +94,8 @@ class Fastfile: LaneFile {
 			outputName: .fastlaneDefault("\(configuration.schemeName)-\(configuration.buildConfiguration).ipa"),
 			configuration: .fastlaneDefault(configuration.buildConfiguration),
 			includeBitcode: .fastlaneDefault(true),
-			exportMethod: .fastlaneDefault(configuration.exportMethod)
+			exportMethod: .fastlaneDefault(configuration.exportMethod),
+			derivedDataPath: .fastlaneDefault("./DerivedData")
 		)
 	}
 }
