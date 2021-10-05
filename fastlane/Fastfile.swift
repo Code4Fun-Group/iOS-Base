@@ -39,52 +39,42 @@ class Fastfile: LaneFile {
 			   removePreviousComments: .fastlaneDefault(true)
 		)
 	}
-
-	func certificatesLane() {
-
-		desc("Update provisioning profiles and certificates for all build configurations")
-
-		let configurations: [Configuration] = [InternalDebug(), TestFlight(), AppStore()]
-
-		for configuration in configurations {
-
-			match(
-				type: configuration.exportMethod,
-				readonly: .fastlaneDefault(isCI),
-				appIdentifier: [configuration.bundleIdentifier],
-				forceForNewDevices: configuration.exportMethod == "development"
-			)
-		}
-	}
 	
 	func developLane() {
-		certificatesLane()
 		desc("Create a develop build and export an .ipa file")
 
+		buildDebug(configuration: InternalDebug())
+	}
+	
+	func ppeLane() {
+		desc("Create a develop build and export an .ipa file")
+
+		buildDebug(configuration: PPE())
+	}
+	
+	func stagingLane() {
+		desc("Create a staging build and export an .ipa file")
+
+		buildProduct(configuration: QA(), exportIpa: true)
+	}
+
+	func productionLane() {
+		desc("Create a production build and export an .ipa file")
+
+		buildProduct(configuration: AppStore(), exportIpa: true)
+	}
+	
+	private func buildDebug(configuration: Configuration) {
 		buildApp(workspace: "\(environmentVariable(get: "APP_NAME")).xcworkspace",
-				 scheme: .fastlaneDefault("develop"),
+				 scheme: .fastlaneDefault(configuration.schemeName),
 				 clean: .fastlaneDefault(true),
-				 configuration: .fastlaneDefault("Debug"),
+				 configuration: .fastlaneDefault(configuration.buildConfiguration),
 				 skipPackageIpa: .fastlaneDefault(true),
-				 exportMethod: .fastlaneDefault("development"),
+				 exportMethod: .fastlaneDefault(configuration.exportMethod),
 				 skipArchive: .fastlaneDefault(true),
 				 skipCodesigning: .fastlaneDefault(true),
 				 derivedDataPath: .fastlaneDefault("./DerivedData"),
 				 analyzeBuildTime: .fastlaneDefault(true))
-	}
-	
-	func stagingLane() {
-		certificatesLane()
-		desc("Create a staging build and export an .ipa file")
-
-		buildProduct(configuration: TestFlight(), exportIpa: true)
-	}
-
-	func productionLane() {
-		certificatesLane()
-		desc("Create a production build and export an .ipa file")
-
-		buildProduct(configuration: AppStore(), exportIpa: true)
 	}
 	
 	private func buildProduct(configuration: Configuration, exportIpa: Bool) {
@@ -99,8 +89,8 @@ class Fastfile: LaneFile {
 		
 		// Build the product for the specified build configuration
 		gym(
-			scheme: .fastlaneDefault(configuration.targetSchemeName),
-			outputName: .fastlaneDefault("\(configuration.targetSchemeName)-\(configuration.buildConfiguration).ipa"),
+			scheme: .fastlaneDefault(configuration.schemeName),
+			outputName: .fastlaneDefault("\(configuration.schemeName)-\(configuration.buildConfiguration).ipa"),
 			configuration: .fastlaneDefault(configuration.buildConfiguration),
 			skipPackageIpa: .fastlaneDefault(!exportIpa),
 			exportMethod: .fastlaneDefault(configuration.exportMethod)
@@ -111,7 +101,7 @@ class Fastfile: LaneFile {
 protocol Configuration {
 	var exportMethod: String { get }
 	var buildConfiguration: String { get }
-	var targetSchemeName: String { get }
+	var schemeName: String { get }
 	var bundleIdentifier: String { get }
 }
 
@@ -119,19 +109,29 @@ struct InternalDebug: Configuration {
 	// Configuration for building debug builds on physical devices in-house
 	var exportMethod = "development"
 	var buildConfiguration = "Debug"
-	var targetSchemeName = "develop"
+	var schemeName = "Development"
 	var bundleIdentifier: String {
-		return "\(appIdentifier).develop"
+		return "\(appIdentifier).dev"
 	}
 }
 
-struct TestFlight: Configuration {
+struct PPE: Configuration {
+	// Configuration for building debug builds on physical devices in-house
+	var exportMethod = "development"
+	var buildConfiguration = "Debug"
+	var schemeName = "PPE"
+	var bundleIdentifier: String {
+		return "\(appIdentifier).dev"
+	}
+}
+
+struct QA: Configuration {
 	// Configuration for building test builds to deploy in Test Flight
 	var exportMethod = "adhoc"
 	var buildConfiguration = "Release"
-	var targetSchemeName = "staging"
+	var schemeName = "QA"
 	var bundleIdentifier: String {
-		return "\(appIdentifier).staging"
+		return "\(appIdentifier).qa"
 	}
 }
 
@@ -139,7 +139,7 @@ struct AppStore: Configuration {
 	// Configuration for building release builds to deploy in App Store
 	var exportMethod = "appstore"
 	var buildConfiguration = "Release"
-	var targetSchemeName = "production"
+	var schemeName = "Production"
 	var bundleIdentifier: String {
 		return "\(appIdentifier)"
 	}
