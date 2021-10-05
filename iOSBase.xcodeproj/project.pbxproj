@@ -417,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSBase/Pods-iOSBase-frameworks.sh\"\n";
+			shellScript = "chmod a+x \"${PODS_ROOT}/Target Support Files/Pods-iOSBase/Pods-iOSBase-frameworks.sh\"\n\n\"${PODS_ROOT}/Target Support Files/Pods-iOSBase/Pods-iOSBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBEAB32626FB9BAC00BD82C6 /* [CP] Check Pods Manifest.lock */ = {
