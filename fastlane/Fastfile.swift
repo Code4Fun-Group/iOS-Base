@@ -108,7 +108,7 @@ protocol Configuration {
 struct InternalDebug: Configuration {
 	// Configuration for building debug builds on physical devices in-house
 	var exportMethod = "development"
-	var buildConfiguration = "Debug"
+	var buildConfiguration = "Development"
 	var schemeName = "Development"
 	var bundleIdentifier: String {
 		return "\(appIdentifier).dev"
@@ -118,7 +118,7 @@ struct InternalDebug: Configuration {
 struct PPE: Configuration {
 	// Configuration for building debug builds on physical devices in-house
 	var exportMethod = "development"
-	var buildConfiguration = "Debug"
+	var buildConfiguration = "PPE"
 	var schemeName = "PPE"
 	var bundleIdentifier: String {
 		return "\(appIdentifier).dev"
@@ -128,7 +128,7 @@ struct PPE: Configuration {
 struct QA: Configuration {
 	// Configuration for building test builds to deploy in Test Flight
 	var exportMethod = "adhoc"
-	var buildConfiguration = "Release"
+	var buildConfiguration = "QA"
 	var schemeName = "QA"
 	var bundleIdentifier: String {
 		return "\(appIdentifier).qa"
@@ -138,7 +138,7 @@ struct QA: Configuration {
 struct AppStore: Configuration {
 	// Configuration for building release builds to deploy in App Store
 	var exportMethod = "appstore"
-	var buildConfiguration = "Release"
+	var buildConfiguration = "Production"
 	var schemeName = "Production"
 	var bundleIdentifier: String {
 		return "\(appIdentifier)"
