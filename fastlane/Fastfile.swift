@@ -87,6 +87,13 @@ class Fastfile: LaneFile {
 			forceForNewDevices: .fastlaneDefault(configuration.exportMethod == "development")
 		)
 		
+		syncCodeSigning(type: configuration.exportMethod,
+						readonly: .fastlaneDefault(isCI),
+						appIdentifier: [configuration.bundleIdentifier],
+						gitUrl: environmentVariable(get: "GIT_URL"),
+						cloneBranchDirectly: .fastlaneDefault(true)
+						
+		)
 		// Build the product for the specified build configuration
 		gym(
 			scheme: .fastlaneDefault(configuration.schemeName),
