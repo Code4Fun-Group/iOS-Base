@@ -39,6 +39,7 @@ platform :ios do
 
   desc "Build QA"
   private_lane :build_qa do
+    increment_version_number
     build_app(
       workspace: "iOSBase.xcworkspace",
       scheme: "QA",
