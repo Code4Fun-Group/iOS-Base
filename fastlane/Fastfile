@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Build QA"
+  lane :staging_lane do
+    match_qa
+    build_qa
+  end
+
+  desc "Match QA"
+  private_lane :match_qa do
+    sync_code_signing(
+      type: "adhoc",
+      readonly: true,
+      clone_branch_directly: true)
+  end
+
+  desc "Build IPA"
+  lane :build_qa do
+    build_app(
+      workspace: "iOSBase.xcworkspace",
+      scheme: "QA",
+      export_method: "ad-hoc",
+      configuration: "QA")
+  end
+end
