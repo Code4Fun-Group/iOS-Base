@@ -18,25 +18,41 @@ default_platform(:ios)
 platform :ios do
   desc "Build QA"
   lane :qa do
-    match_qa
+    match_adhoc
     build_qa
   end
 
+  desc "Build PPE"
+  lane :ppe do
+    match_adhoc
+    build_ppe
+  end
+
+
   desc "Match QA"
-  private_lane :match_qa do
+  private_lane :match_adhoc do
     sync_code_signing(
       type: "adhoc",
       readonly: true,
       clone_branch_directly: true)
   end
 
-  desc "Build IPA"
+  desc "Build QA"
   private_lane :build_qa do
     build_app(
       workspace: "iOSBase.xcworkspace",
       scheme: "QA",
       export_method: "ad-hoc",
       configuration: "QA")
+  end
+
+  desc "Build PPE"
+  private_lane :build_ppe do
+    build_app(
+      workspace: "iOSBase.xcworkspace",
+      scheme: "PPE",
+      export_method: "ad-hoc",
+      configuration: "PPE")
   end
 
   desc "Swiftlint"
