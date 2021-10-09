@@ -14,20 +14,20 @@ pipeline {
       steps {
         sh """
         bundle install 
-        bundle exec fastlane initLane
+        bundle exec fastlane run cocoa pods
         """
       }
     }
     stage("Swiftlint") {
       steps {
-        sh "bundle exec fastlane swiftLintLane"
+        sh "bundle exec fastlane swiftlint"
       }
     }
     stage("Danger") {
       steps {
         sh """
         export DANGER_GITHUB_API_TOKEN="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"
-        bundle exec fastlane  dangerLane
+        bundle exec run danger
         """
       }
     }

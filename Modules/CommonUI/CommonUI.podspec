@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "CommonUI"
   spec.version      = "1.0"
-  spec.summary      = "Common Framework"
+  spec.summary      = "CommonUI Framework"
   spec.description  = <<-DESC
 	Common	
 DESC
