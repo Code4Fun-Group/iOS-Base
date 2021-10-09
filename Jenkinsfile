@@ -20,15 +20,18 @@ pipeline {
     }
     stage("Swiftlint") {
       steps {
-        sh "bundle exec fastlane swiftlint"
+        sh "bundle exec fastlane run swiftlint"
       }
     }
     stage("Danger") {
       steps {
-        sh """
-        export DANGER_GITHUB_API_TOKEN="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"
-        bundle exec run danger
-        """
+	environment {
+                GITHUB_PERSONAL_TOKEN = credentials('GITHUB_PERSONAL_TOKEN')
+            }
+        	sh """
+        	export DANGER_GITHUB_API_TOKEN=$GITHUB_PERSONAL_TOKEN
+        	bundle exec fastlane run danger
+        	"""
       }
     }
   }
