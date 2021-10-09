@@ -30,11 +30,8 @@ platform :ios do
 
 
   desc "Match QA"
-  private_lane :match_adhoc do
-    sync_code_signing(
-      type: "adhoc",
-      readonly: true,
-      clone_branch_directly: true)
+  private_lane :match_adhoc do\
+    sync_code_signing(type: "adhoc", force_for_new_devices: true)
   end
 
   desc "Build QA"
