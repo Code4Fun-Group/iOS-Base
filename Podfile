@@ -17,8 +17,8 @@ use_frameworks!
 # Pods
 ##################
 def common
-	pod 'Common', :path => './Modules/Common'
-	pod 'CommonUI', :path => './Modules/CommonUI'
+#	pod 'Common', :path => './Modules/Common'
+#	pod 'CommonUI', :path => './Modules/CommonUI'
 end
 
 def xctools
@@ -29,7 +29,7 @@ def analytics
 end
 
 def utilities
-	pod 'netfox', :configurations => ['Development', 'QA']
+#	pod 'netfox', :configurations => ['Development', 'QA']
 end
 
 def ui

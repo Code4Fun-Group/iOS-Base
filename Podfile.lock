@@ -1,40 +1,16 @@
 PODS:
-  - Common (1.0)
-  - CommonUI (1.0):
-    - FloatingPanel
-    - Kingfisher
-  - FloatingPanel (2.4.0)
-  - Kingfisher (6.3.1)
-  - netfox (1.19.0)
   - SwiftLint (0.44.0)
 
 DEPENDENCIES:
-  - Common (from `./Modules/Common`)
-  - CommonUI (from `./Modules/CommonUI`)
-  - netfox
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - FloatingPanel
-    - Kingfisher
-    - netfox
     - SwiftLint
 
-EXTERNAL SOURCES:
-  Common:
-    :path: "./Modules/Common"
-  CommonUI:
-    :path: "./Modules/CommonUI"
-
 SPEC CHECKSUMS:
-  Common: 0c0227a261136f381a6b95249f3094491768e562
-  CommonUI: b84095a0ec2bb042014c37bae0a77cf4dc04920a
-  FloatingPanel: fa60183672ed86313b9e241e34465e82211260e8
-  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
-  netfox: efeec1d23406df6cd605212f09a40957bb5654eb
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: bdf5d8903e48c4e4de70846127c4a6ccefedde00
+PODFILE CHECKSUM: 9aa928afe42c75a447596fee62a118d2d956ece8
 
 COCOAPODS: 1.10.2
