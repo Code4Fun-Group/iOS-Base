@@ -7,3 +7,8 @@
 
 app_identifier([ENV['APP_IDENTIFIER']])
 apple_id(ENV['APPLE_ID'])
+
+# QA
+for_lane :qa do
+    team_id("L38PND4S5S")
+end

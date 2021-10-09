@@ -11,7 +11,7 @@
 #
 
 # Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+update_fastlane
 
 default_platform(:ios)
 
@@ -32,11 +32,34 @@ platform :ios do
   end
 
   desc "Build IPA"
-  lane :build_qa do
+  private_lane :build_qa do
     build_app(
       workspace: "iOSBase.xcworkspace",
       scheme: "QA",
       export_method: "ad-hoc",
       configuration: "QA")
+  end
+
+  desc "Swiftlint"
+  lane :swiftlint do
+    swiftlint(
+      reporter: "xcode",
+      quiet: true,
+      raise_if_swiftlint_error: true
+    )
+  end
+
+  desc "Precheck"
+  lane :dev_lane do
+    build_app(
+      workspace: "iOSBase.xcworkspace",
+      scheme: "Develoment",
+      skip_package_ipa: true,
+      skip_archive: true,
+      skip_codesigning: true,
+      analyze_build_time: true,
+      derived_data_path: "./DerivedData",
+      clean: false,
+      export_method: "development")
   end
 end
