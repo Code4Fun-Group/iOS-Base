@@ -6,7 +6,7 @@ username(ENV['APPLE_ID'])
 
 app_identifier([
     ENV['APP_IDENTIFIER'] + ".dev",
-    ENV['APP_IDENTIFIER'] + ".qa")
+    ENV['APP_IDENTIFIER'] + ".qa"])
 
 # DEV
 for_lane :dev do
