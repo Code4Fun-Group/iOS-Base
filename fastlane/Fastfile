@@ -17,7 +17,7 @@ default_platform(:ios)
 
 platform :ios do
   desc "Build QA"
-  lane :staging_lane do
+  lane :qa do
     match_qa
     build_qa
   end
@@ -26,7 +26,6 @@ platform :ios do
   private_lane :match_qa do
     sync_code_signing(
       type: "adhoc",
-      git_url: ENV["GIT_URL”],
       readonly: true,
       clone_branch_directly: true)
   end
