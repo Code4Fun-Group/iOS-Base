@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CommonUI
 
 class HomeViewController: UIViewController {
 
@@ -19,5 +18,3 @@ class HomeViewController: UIViewController {
 		super.viewWillAppear(animated)
 	}
 }
-
-extension HomeViewController: IViewControllerLoading {}
