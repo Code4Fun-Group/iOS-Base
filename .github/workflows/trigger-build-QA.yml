@@ -19,5 +19,5 @@ jobs:
           --user namnh92:$JENKINS_TOKEN \
           --header "Content-Type: application/x-www-form-urlendcoded" \
           --request POST \
-          --url https://jenkins.code4fun.group/job/Base/view/iOS/job/QA/job/iOS-QA-Diawi/buildWithParameters
+          --url https://jenkins.code4fun.group/job/Base/view/iOS/job/QA/job/iOS-QA-AppCenter/buildWithParameters
 
