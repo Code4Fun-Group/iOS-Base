@@ -55,15 +55,6 @@ platform :ios do
       configuration: "PPE")
   end
 
-  desc "Swiftlint"
-  lane :swiftlint do
-    swiftlint(
-      reporter: "xcode",
-      quiet: true,
-      raise_if_swiftlint_error: true
-    )
-  end
-
   desc "Precheck"
   lane :dev_lane do
     build_app(

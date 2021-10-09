@@ -11,7 +11,15 @@ class HomeViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		DependencyResolver.shared.apiService.getSamples { result in
+			switch result {
+			case .success(let datas):
+				print(datas)
+			case .failure(let error):
+				print(error)
+			}
+		}
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A232CA5624B56764000A20EB /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = A232CA5424B56764000A20EB /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A25FB2EB24B5A543005A3B5B /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A25FB2E924B5A543005A3B5B /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A232CA5124B56764000A20EB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A232CA5424B56764000A20EB /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		A232CA5524B56764000A20EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25FB2E624B5A543005A3B5B /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25FB2E924B5A543005A3B5B /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		A25FB2EA24B5A543005A3B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A232CA4E24B56764000A20EB /* Frameworks */ = {
+		A25FB2E324B5A543005A3B5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -27,77 +27,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A232CA4724B56764000A20EB = {
+		A25FB2DC24B5A543005A3B5B = {
 			isa = PBXGroup;
 			children = (
-				A232CA5324B56764000A20EB /* Common */,
-				A232CA5224B56764000A20EB /* Products */,
+				A25FB2E824B5A543005A3B5B /* Networking */,
+				A25FB2E724B5A543005A3B5B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A232CA5224B56764000A20EB /* Products */ = {
+		A25FB2E724B5A543005A3B5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A232CA5124B56764000A20EB /* Common.framework */,
+				A25FB2E624B5A543005A3B5B /* Networking.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A232CA5324B56764000A20EB /* Common */ = {
+		A25FB2E824B5A543005A3B5B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				A232CA5424B56764000A20EB /* Common.h */,
-				A232CA5524B56764000A20EB /* Info.plist */,
+				A25FB2E924B5A543005A3B5B /* Networking.h */,
+				A25FB2EA24B5A543005A3B5B /* Info.plist */,
 			);
-			path = Common;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A232CA4C24B56764000A20EB /* Headers */ = {
+		A25FB2E124B5A543005A3B5B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A232CA5624B56764000A20EB /* Common.h in Headers */,
+				A25FB2EB24B5A543005A3B5B /* Networking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A232CA5024B56764000A20EB /* Common */ = {
+		A25FB2E524B5A543005A3B5B /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A232CA5924B56764000A20EB /* Build configuration list for PBXNativeTarget "Common" */;
+			buildConfigurationList = A25FB2EE24B5A543005A3B5B /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
-				A232CA4C24B56764000A20EB /* Headers */,
-				A232CA4D24B56764000A20EB /* Sources */,
-				A232CA4E24B56764000A20EB /* Frameworks */,
-				A232CA4F24B56764000A20EB /* Resources */,
+				A25FB2E124B5A543005A3B5B /* Headers */,
+				A25FB2E224B5A543005A3B5B /* Sources */,
+				A25FB2E324B5A543005A3B5B /* Frameworks */,
+				A25FB2E424B5A543005A3B5B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Common;
-			productName = Common;
-			productReference = A232CA5124B56764000A20EB /* Common.framework */;
+			name = Networking;
+			productName = Networking;
+			productReference = A25FB2E624B5A543005A3B5B /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A232CA4824B56764000A20EB /* Project object */ = {
+		A25FB2DD24B5A543005A3B5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					A232CA5024B56764000A20EB = {
+					A25FB2E524B5A543005A3B5B = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
-			buildConfigurationList = A232CA4B24B56764000A20EB /* Build configuration list for PBXProject "CommonUI" */;
+			buildConfigurationList = A25FB2E024B5A543005A3B5B /* Build configuration list for PBXProject "Networking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,18 +105,18 @@
 				en,
 				Base,
 			);
-			mainGroup = A232CA4724B56764000A20EB;
-			productRefGroup = A232CA5224B56764000A20EB /* Products */;
+			mainGroup = A25FB2DC24B5A543005A3B5B;
+			productRefGroup = A25FB2E724B5A543005A3B5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A232CA5024B56764000A20EB /* Common */,
+				A25FB2E524B5A543005A3B5B /* Networking */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A232CA4F24B56764000A20EB /* Resources */ = {
+		A25FB2E424B5A543005A3B5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,7 +126,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A232CA4D24B56764000A20EB /* Sources */ = {
+		A25FB2E224B5A543005A3B5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,7 +136,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A232CA5724B56764000A20EB /* Debug */ = {
+		A25FB2EC24B5A543005A3B5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		A232CA5824B56764000A20EB /* Release */ = {
+		A25FB2ED24B5A543005A3B5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +258,7 @@
 			};
 			name = Release;
 		};
-		A232CA5A24B56764000A20EB /* Debug */ = {
+		A25FB2EF24B5A543005A3B5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -267,14 +267,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Common/Info.plist;
+				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vn.namnh.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.namnh.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -282,7 +282,7 @@
 			};
 			name = Debug;
 		};
-		A232CA5B24B56764000A20EB /* Release */ = {
+		A25FB2F024B5A543005A3B5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -291,14 +291,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Common/Info.plist;
+				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vn.namnh.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.namnh.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A232CA4B24B56764000A20EB /* Build configuration list for PBXProject "CommonUI" */ = {
+		A25FB2E024B5A543005A3B5B /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A232CA5724B56764000A20EB /* Debug */,
-				A232CA5824B56764000A20EB /* Release */,
+				A25FB2EC24B5A543005A3B5B /* Debug */,
+				A25FB2ED24B5A543005A3B5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A232CA5924B56764000A20EB /* Build configuration list for PBXNativeTarget "Common" */ = {
+		A25FB2EE24B5A543005A3B5B /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A232CA5A24B56764000A20EB /* Debug */,
-				A232CA5B24B56764000A20EB /* Release */,
+				A25FB2EF24B5A543005A3B5B /* Debug */,
+				A25FB2F024B5A543005A3B5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A232CA4824B56764000A20EB /* Project object */;
+	rootObject = A25FB2DD24B5A543005A3B5B /* Project object */;
 }

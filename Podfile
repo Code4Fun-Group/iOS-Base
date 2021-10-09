@@ -19,6 +19,7 @@ use_frameworks!
 def common
 	pod 'Common', :path => './Modules/Common'
 	pod 'CommonUI', :path => './Modules/CommonUI'
+	pod 'Networking', :path => './Modules/Networking'
 end
 
 def xctools
