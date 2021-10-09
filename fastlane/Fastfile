@@ -79,8 +79,12 @@ platform :ios do
   end
 
   desc "Renew provisioning profiles for default target"
-  lane :update_profiles do
-    sync_code_signing(type: "development", force_for_new_devices: true)
+  lane :update_adhoc_profiles do
     sync_code_signing(type: "adhoc", force_for_new_devices: true)
+  end
+
+  desc "Renew provisioning profiles for default target"
+  lane :update_dev_profiles do
+    sync_code_signing(type: "development", force_for_new_devices: true)
   end
 end
