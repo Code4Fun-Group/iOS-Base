@@ -26,6 +26,7 @@ platform :ios do
   private_lane :match_qa do
     sync_code_signing(
       type: "adhoc",
+      git_url: ENV["GIT_URL”],
       readonly: true,
       clone_branch_directly: true)
   end
