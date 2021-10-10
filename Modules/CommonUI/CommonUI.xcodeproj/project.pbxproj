@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A232CA4B24B56764000A20EB /* Build configuration list for PBXProject "Common" */;
+			buildConfigurationList = A232CA4B24B56764000A20EB /* Build configuration list for PBXProject "CommonUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -263,7 +263,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = JS7JYW3VCK;
+				DEVELOPMENT_TEAM = L38PND4S5S;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -274,7 +274,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tescolotus.oneapp.common.Common;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.namnh.CommonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -287,7 +287,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = JS7JYW3VCK;
+				DEVELOPMENT_TEAM = L38PND4S5S;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -298,7 +298,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tescolotus.oneapp.common.Common;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.namnh.CommonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,7 +309,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A232CA4B24B56764000A20EB /* Build configuration list for PBXProject "Common" */ = {
+		A232CA4B24B56764000A20EB /* Build configuration list for PBXProject "CommonUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A232CA5724B56764000A20EB /* Debug */,
