@@ -47,6 +47,7 @@ files_to_check = (git.modified_files + git.added_files).uniq
 		warn("Consider to place some `MARK:` lines for files over 200 lines big.")
 	end
 
+	## Self-review Localized
 	hasLocalizedKeys.sort.uniq.each do |key|
 		markdown('- [ ] I understand that "' + key + '" is now existed in Localized service')
 	end

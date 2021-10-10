@@ -6,4 +6,4 @@
 #     https://docs.fastlane.tools/advanced/#appfile
 
 apple_id(ENV['APPLE_ID'])
-team_id("L38PND4S5S")
+team_id(ENV['TEAM_ID'])
