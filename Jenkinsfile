@@ -9,6 +9,7 @@ pipeline {
 		disableConcurrentBuilds()
 	}
 
+// Initialize
 	stages {
 		stage("Initialize") {
 			steps {
@@ -18,7 +19,8 @@ pipeline {
 				"""
 			}
 		}
-    
+
+// Swiftlint    
 		stage("Swiftlint") {
 			steps {
 				sh """
@@ -26,7 +28,8 @@ pipeline {
 				"""
 			}
 		}
-	
+
+// Danger	
 		stage("Danger") {
 			environment {
 				GITHUB_PERSONAL_TOKEN = credentials('GITHUB_PERSONAL_TOKEN')
