@@ -21,7 +21,9 @@ pipeline {
     
 		stage("Swiftlint") {
 			steps {
-				sh "bundle exec fastlane run swiftlint"
+				sh """
+				bundle exec fastlane run swiftlint
+				"""
 			}
 		}
 	
