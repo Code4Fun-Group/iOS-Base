@@ -4,10 +4,6 @@ storage_mode("git")
 
 username(ENV['APPLE_ID'])
 
-app_identifier([
-    ENV['APP_IDENTIFIER'] + ".dev",
-    ENV['APP_IDENTIFIER'] + ".qa"])
-
 # DEV
 for_lane :dev do
   app_identifier([ENV['APP_IDENTIFIER'] + ".dev"])
@@ -27,4 +23,18 @@ end
 # PROD
 for_lane :production do
   app_identifier([ENV['APP_IDENTIFIER']])
+end
+
+# PROVISION ADHOC
+for_lane :update_adhoc_profiles do
+  app_identifier([
+    ENV['APP_IDENTIFIER'] + ".qa",
+    ENV['APP_IDENTIFIER'] + ".ppe",
+    ENV['APP_IDENTIFIER']
+  ])
+end
+
+# PROVISION DEV
+for_lane :update_dev_profiles do
+  app_identifier([ENV['APP_IDENTIFIER'] + ".dev"])
 end
