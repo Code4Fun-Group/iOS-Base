@@ -13,4 +13,6 @@ DESC
 
   spec.source       = { :git => "https://github.com/Code4Fun-Group/Common.git", :tag => spec.version.to_s }
   spec.source_files = 'Common/**/*.{swift,h}'
+	
+	spec.dependency 'KeychainAccess'
 end

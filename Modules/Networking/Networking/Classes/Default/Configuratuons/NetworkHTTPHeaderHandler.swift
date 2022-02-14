@@ -8,12 +8,20 @@
 import Foundation
 
 public struct NetworkHTTPHeaderHandler {
-	public init() {}
+	let tokenService: ITokenService
+	
+	public init(tokenService: ITokenService) {
+		self.tokenService = tokenService
+	}
 }
 
 extension NetworkHTTPHeaderHandler: INetworkHTTPHeaderHandler {
 	public func construct(from request: URLRequest, configurations: INetworkConfigurations) -> [String: String]? {
-		let customFields = request.allHTTPHeaderFields ?? [:]
+		var customFields = request.allHTTPHeaderFields ?? [:]
+		
+		if let accessToken = tokenService.accessToken {
+			customFields["Authorization"] = "Bearer " + accessToken
+		}
 		
 		let headerFields = configurations.defaultHTTPHeaderFields.merging(customFields) { (_, new) -> String in
 			return new

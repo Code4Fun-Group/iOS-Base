@@ -41,17 +41,17 @@ public enum DeviceType {
 
 public class SystemInfo {
 	// MARK: - ScreenInfo
-	static let screenBounds 		= UIScreen.main.bounds
-	static let screenWidth 			= UIScreen.main.bounds.width
-	static let screenHeight 		= UIScreen.main.bounds.height
-	static let screenNativeBounds 	= UIScreen.main.nativeBounds
-	static let screenNativeWidth	= UIScreen.main.nativeBounds.width
-	static let screenNativeHeight 	= UIScreen.main.nativeBounds.height
-	static var statusBarHeight: CGFloat {
+	public static let screenBounds 		= UIScreen.main.bounds
+	public static let screenWidth 			= UIScreen.main.bounds.width
+	public static let screenHeight 		= UIScreen.main.bounds.height
+	public static let screenNativeBounds 	= UIScreen.main.nativeBounds
+	public static let screenNativeWidth	= UIScreen.main.nativeBounds.width
+	public static let screenNativeHeight 	= UIScreen.main.nativeBounds.height
+	public static var statusBarHeight: CGFloat {
 		guard let window = UIApplication.shared.windows.first else { return 0 }
 		return window.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
 	}
-	static var safeAreaInsetTop: CGFloat {
+	public static var safeAreaInsetTop: CGFloat {
 		guard let window = UIApplication.shared.windows.first else { return 0 }
 		return window.safeAreaInsets.top
 	}

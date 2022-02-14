@@ -10,6 +10,7 @@ import Foundation
 public protocol INetworkResponseError: Error {
 	var message: String? { get }
 	var name: String? { get }
+	var statusCode: Int? { get }
 }
 
 public protocol INetworkErrorResponseHandler {
