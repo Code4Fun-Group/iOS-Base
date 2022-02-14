@@ -13,16 +13,16 @@ public extension UITableView {
 		dataSource = delegateAndDataSource
 	}
 	
-	func registerNibCellFor<T: UITableViewCell>(type: T.Type) {
-		register(UINib(nibName: type.name, bundle: nil), forCellReuseIdentifier: type.name)
+	func registerNibCellFor<T: UITableViewCell>(type: T.Type, bundle: Bundle) {
+		register(UINib(nibName: type.name, bundle: bundle), forCellReuseIdentifier: type.name)
 	}
 	
 	func registerClassCellFor<T: UITableViewCell>(type: T.Type) {
 		register(type, forCellReuseIdentifier: type.name)
 	}
 	
-	func registerNibHeaderFooterFor<T: UIView>(type: T.Type) {
-		register(UINib(nibName: type.name, bundle: nil), forHeaderFooterViewReuseIdentifier: type.name)
+	func registerNibHeaderFooterFor<T: UIView>(type: T.Type, bundle: Bundle) {
+		register(UINib(nibName: type.name, bundle: bundle), forHeaderFooterViewReuseIdentifier: type.name)
 	}
 	
 	func registerClassHeaderFooterFor<T: UIView>(type: T.Type) {
