@@ -13,16 +13,16 @@ public extension UICollectionView {
 		dataSource = delegateAndDataSource
 	}
 	
-	func registerNibCellFor<T: UICollectionViewCell>(type: T.Type) {
-		register(UINib(nibName: type.name, bundle: nil), forCellWithReuseIdentifier: type.name)
+	func registerNibCellFor<T: UICollectionViewCell>(type: T.Type, bundle: Bundle) {
+		register(UINib(nibName: type.name, bundle: bundle), forCellWithReuseIdentifier: type.name)
 	}
 	
 	func registerClassCellFor<T: UICollectionViewCell>(type: T.Type) {
 		register(type, forCellWithReuseIdentifier: type.name)
 	}
 	
-	func registerNibSupplementaryViewFor<T: UIView>(type: T.Type, ofKind kind: String) {
-		register(UINib(nibName: type.name, bundle: nil), forSupplementaryViewOfKind: kind, withReuseIdentifier: type.name)
+	func registerNibSupplementaryViewFor<T: UIView>(type: T.Type, ofKind kind: String, bundle: Bundle) {
+		register(UINib(nibName: type.name, bundle: bundle), forSupplementaryViewOfKind: kind, withReuseIdentifier: type.name)
 	}
 	
 	func registerClassSupplementaryViewFor<T: UIView>(type: T.Type, ofKind kind: String) {

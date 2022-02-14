@@ -35,6 +35,10 @@ enum NetworkConnectionError: INetworkConnectionError {
 			return "Network.Connection.TimeOut.Name".localized
 		}
 	}
+	
+	var statusCode: Int? {
+		return nil
+	}
 }
 
 public protocol INetworkConnectionHandler {

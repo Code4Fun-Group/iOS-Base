@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Y6W-OH-hqX" customClass="SplashViewController" customModule="epic_medical_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hut-Nf-scj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Pec-TA-GHp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="778-7U-swr">
+                                        <rect key="frame" x="83.5" y="411.5" width="247" height="73.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="778-7U-swr" firstAttribute="width" secondItem="hut-Nf-scj" secondAttribute="width" multiplier="224/375" id="3WC-y6-5rv"/>
+                                    <constraint firstItem="Pec-TA-GHp" firstAttribute="leading" secondItem="hut-Nf-scj" secondAttribute="leading" id="ByV-3o-nkl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pec-TA-GHp" secondAttribute="trailing" id="Qd4-ug-UIK"/>
+                                    <constraint firstItem="Pec-TA-GHp" firstAttribute="leading" secondItem="hut-Nf-scj" secondAttribute="leading" id="Rmo-J8-0HA"/>
+                                    <constraint firstItem="778-7U-swr" firstAttribute="centerY" secondItem="hut-Nf-scj" secondAttribute="centerY" id="WIu-jL-pak"/>
+                                    <constraint firstItem="Pec-TA-GHp" firstAttribute="top" secondItem="hut-Nf-scj" secondAttribute="top" id="Y3G-Sf-ZAU"/>
+                                    <constraint firstItem="778-7U-swr" firstAttribute="centerX" secondItem="hut-Nf-scj" secondAttribute="centerX" id="aBO-VV-i61"/>
+                                    <constraint firstItem="Pec-TA-GHp" firstAttribute="top" secondItem="hut-Nf-scj" secondAttribute="top" id="aT5-j5-1XT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pec-TA-GHp" secondAttribute="bottom" id="don-PO-FyP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pec-TA-GHp" secondAttribute="trailing" id="not-9W-Una"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pec-TA-GHp" secondAttribute="bottom" id="z9x-Fb-NLj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hut-Nf-scj" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="9Xs-Pf-nOd"/>
+                            <constraint firstAttribute="bottom" secondItem="hut-Nf-scj" secondAttribute="bottom" id="Y6v-Xa-92H"/>
+                            <constraint firstItem="hut-Nf-scj" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="ZpM-yc-pwE"/>
+                            <constraint firstAttribute="trailing" secondItem="hut-Nf-scj" secondAttribute="trailing" id="yxi-0i-wdN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash_bg" width="375" height="812"/>
+        <image name="splash_logo" width="224.5" height="73.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

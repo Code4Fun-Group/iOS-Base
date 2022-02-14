@@ -10,12 +10,12 @@ import Foundation
 public struct NetworkResponseError: INetworkResponseError {
 	public let message: String?
 	public let name: String?
-	public let status: Int?
+	public let statusCode: Int?
 	
-	public init(message: String?, name: String?, status: Int?) {
+	public init(message: String?, name: String?, statusCode: Int?) {
 		self.message = message
 		self.name = name
-		self.status = status
+		self.statusCode = statusCode
 	}
 }
 
